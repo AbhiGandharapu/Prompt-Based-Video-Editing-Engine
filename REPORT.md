@@ -34,7 +34,7 @@ Synthetic sample manifest: `outputs/demo/synthetic_edited.mp4.manifest.json`; so
 - No official eight-step example on candidate-owned media and no full seven-scenario hard-case execution. Unit/integration tests are not substitutes for those media scenarios.
 - Perceptual A/V sync, video-frame content checks, official 5-minute/60-minute latency benchmarks, cost per video-minute, and demo video were not captured.
 - Docker is unavailable on the verification host. The container has not been built, started, or checked.
-- The repository identified in GitHub is currently public and empty; no source has been published. Earlier repository preference was for a private PS2 repo. No public deployment URL exists. Reviewer collaborator access was not checked/granted.
+- The source project was pushed to the public `main` branch of `AbhiGandharapu/Prompt-Based-Video-Editing-Engine` on 22 November 2026. Public commit metadata includes the GitHub account author identity. This is a source repository, not a deployed web demo. Reviewer collaborator access to `techteam@incubrix.com` was not checked/granted.
 - The source provenance/license of the timeline model and original engine files that were already in the workspace is unknown. This must be resolved by the candidate before signing a commercial-use declaration or representing the work as wholly authored.
 - Start Confirmation Form submission is unverified; Gmail search found the invitation, not a receipt. The stated confirmation cutoff has passed.
 
@@ -44,4 +44,4 @@ No external model/API or paid external service was called by the application/tes
 
 ## Submission recommendation
 
-Do not claim a completed Core level or all must-haves passed. Do not submit the current public GitHub link as the intended private repository without resolving visibility. Candidate must review the declaration personally, establish provenance of pre-existing engine files, record an unedited demo if possible, resolve reviewer repository access, and accurately disclose the unverified Start Confirmation status.
+Do not claim a completed Core level or all must-haves passed. Candidate must review the declaration personally, establish provenance of pre-existing engine files, record an unedited demo if possible, resolve reviewer repository access, and accurately disclose the unverified Start Confirmation status.
