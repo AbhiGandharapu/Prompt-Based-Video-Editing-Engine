@@ -2,7 +2,7 @@
 
 A local, deterministic video-editing prototype with a browser UI, a source-anchored timeline, a small natural-language command interpreter, FFmpeg rendering, and a JSON API. It is an assessment prototype, not a hosted production service. The UI supports MP4/MOV upload, user-supplied word-level transcript JSON, captions, timeline edits, history, render jobs, preview, download, and manifest review.
 
-The editor uses a responsive dark studio layout: a compact media and project rail, a central source-video preview, an API-backed instruction assistant with explicit operation status, and a lower timeline with caption anchors and transcript controls. The interface uses the system font stack and inline SVG accents; it adds no font, icon, or UI framework dependency. The timeline strip can be clicked to seek through the current edited sequence.
+The editor uses a responsive creative-workspace layout: a section rail, source-media library and properties, a dominant preview with custom play/pause/seek/mute/fullscreen controls, a command center, operation history, and a lower timeline with proportional time ticks and separate video, linked-source-audio, and word-anchored caption tracks. A transcript navigator can seek to supplied words. Navigation and example prompts are interactive; examples populate the composer and require a deliberate Apply action. At narrow widths, the workspace stacks its panels while keeping the timeline horizontally navigable. The page uses the system font stack and inline SVG icons without added font, icon, or UI framework dependencies.
 
 ## Run the editor on your computer
 
