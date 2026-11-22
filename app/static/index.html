@@ -186,7 +186,7 @@ details.transcript-box[open] summary { margin-bottom: 8px; }
       <div id="videoArea" class="placeholder"><div class="placeholder-inner"><div class="upload-glyph" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></div><strong>Your next cut starts here</strong><div class="small">Import an MP4 or MOV video to open its preview and editing timeline.</div></div></div>
       <video id="video" class="video" controls playsinline style="display:none" aria-label="Source video preview"></video>
     </div>
-    <div class="player-bar"><div class="player-tools"><span class="player-time" id="previewTime">00:00.0</span><span>Source preview · follows visible segment order and speed</span></div><span class="muted-note">Playback controls use your browser’s native video player</span></div>
+    <div class="player-bar"><div class="player-tools"><span class="player-time" id="previewTime">00:00.0</span><span>Source preview · native playback controls</span></div><span class="muted-note">Timeline clicks map edited positions back to source time</span></div>
   </section>
 
   <aside class="panel assistant" aria-label="Editing assistant and render">
@@ -202,7 +202,7 @@ details.transcript-box[open] summary { margin-bottom: 8px; }
   </aside>
 
   <section class="panel timeline-panel" aria-label="Timeline and transcript tools">
-    <div class="section-head"><div><h2>Timeline</h2><div class="desc">Source ranges stay attached to their content as the edit changes.</div></div><div class="timeline-toolbar"><span class="meta-pill">Video + caption anchors</span><div class="row"><button id="timelineRefreshHint" class="quiet" type="button" title="Use Refresh timeline to reload session state">Session timeline</button></div></div></div>
+    <div class="section-head"><div><h2>Timeline</h2><div class="desc">Source ranges stay attached to their content as the edit changes.</div></div><div class="timeline-toolbar"><span class="meta-pill">Video + caption anchors</span></div></div>
     <div class="timeline-scroll"><div class="ruler"><span>00:00</span><span>25%</span><span>50%</span><span>75%</span><span id="endLabel">00:00</span></div><div class="track-row"><div class="track-label"><i class="track-swatch"></i>Video</div><div class="timeline"><div class="track" id="track" role="slider" aria-label="Edited timeline. Click to seek preview." tabindex="0"><i class="playhead" id="playhead"></i></div></div></div><div class="track-row"><div class="track-label"><i class="track-swatch caption-swatch"></i>Captions</div><div class="timeline"><div class="track" id="captionTrack" aria-label="Caption anchor positions"></div></div></div></div>
     <div class="timeline-note">Caption markers indicate anchored words. Click the video strip to seek; ruler is proportional to the current edited duration.</div>
     <div class="anchors"><div class="anchor-title">Content-anchored caption <span id="anchorStatus">Uses exact loaded transcript phrase</span></div><div class="row anchor-fields"><input id="captionText" type="text" placeholder="Caption text, e.g. Welcome!" aria-label="Caption text"><input id="captionPhrase" type="text" placeholder="Exact spoken phrase to anchor" aria-label="Spoken phrase anchor"><button id="captionBtn">Add caption</button></div></div>
