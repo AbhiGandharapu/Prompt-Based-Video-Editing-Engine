@@ -11,13 +11,15 @@ This is a working **local prototype** with a browser UI, Python HTTP API, determ
 - Rule-based parser produces Applied / Needs clarification / Rejected results for the supported command subset. Repeated pricing concepts clarify; bleep and unsupported audio operations reject.
 - Cut, keep, reorder, speed, anchored caption, text overlay, automatic caption grouping, transcript-marked filler removal, mute, undo, redo, and original-source intro restore.
 - FFmpeg segment rendering, speed adjustment, caption/overlay burn-in, and mute filtering; a background render endpoint returns a job ID; generated output and manifest are downloadable.
-- Browser UI for upload, transcript JSON, commands, timeline visualization, history, undo/redo, render, download and manifest.
+- Responsive editing workspace with source library/properties, custom preview playback and seeking, a rule-based command center, explicit operation statuses, edit history, and a time-ruler timeline with linked V1/A1/C1 tracks. The audio lane appears only when source audio exists; caption bars span their transcript anchors; supplied transcript words can navigate the preview.
 - OpenAPI 3.1 file, environment template, Docker/Compose files, and a JSON session runner.
 
 ## Verification performed (2026-11-22 local run)
 
 Command: `py -m unittest discover -s tests -v`  
 Result: **18 tests passed, 0 failed**. Includes 12 timeline tests, four instruction-parser tests, one actual FFmpeg rendering integration test, and one API end-to-end test. The end-to-end test generated a 6-second 30 fps pattern/sine file, uploaded it, supplied a transcript, applied a caption and cut, checked repeated pricing clarification/selection, rejected bleep, rendered asynchronously, polled its job, checked output hash and timing fields, and verified the downloaded original retained its initial SHA-256. It also checks the UI HTML and readiness response are served by the local HTTP process.
+
+Browser review after the UI redesign imported the generated 8-second sample, applied a two-second cut, undid that cut back to 8 seconds, and verified custom preview playback updates the edited-time control. The responsive desktop layout had no horizontal document overflow, and the browser console reported no warning/error entries during this review. This was a generated test-pattern clip, not speech media.
 
 Session runner: `py scripts/run_session.py examples/demo_session.json --start-server --output outputs/session_runs` completed nine instructions (eight applied, one pricing clarification) on synthetic media; the render job succeeded, the final caption color is red, and the runner downloaded the MP4 and manifest into its output folder. The nine measured instruction responses had a median latency of 12.404 ms and a maximum of 13.554 ms on this local Windows host for an 8-second source. These values are not the official 5-minute/60-minute benchmark; raw responses, snapshots, and rendered files are in `outputs/session_runs/`; a compact record is in `evidence/session_runner_summary.json`.
 
