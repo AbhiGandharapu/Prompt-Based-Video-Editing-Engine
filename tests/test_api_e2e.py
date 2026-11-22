@@ -50,7 +50,7 @@ class ApiEndToEndTests(unittest.TestCase):
                 ui_code, ui_page = call(base + "/")
                 self.assertEqual(ui_code, 200)
                 self.assertIn(b"Prompt Video Editor", ui_page)
-                self.assertIn(b"Upload video", ui_page)
+                self.assertIn(b"Import video", ui_page)
                 self.assertEqual(call(base + "/ready")[0], 200)
                 video = Path(tmp) / "input.mp4"
                 subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", "testsrc2=size=320x180:rate=30:duration=6", "-f", "lavfi", "-i", "sine=frequency=440:sample_rate=48000:duration=6", "-shortest", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", str(video)], check=True)
