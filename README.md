@@ -2,6 +2,8 @@
 
 A local, deterministic video-editing prototype with a browser UI, a source-anchored timeline, a small natural-language command interpreter, FFmpeg rendering, and a JSON API. It is an assessment prototype, not a hosted production service. The UI supports MP4/MOV upload, user-supplied word-level transcript JSON, captions, timeline edits, history, render jobs, preview, download, and manifest review.
 
+The editor uses a responsive dark studio layout: a compact media and project rail, a central source-video preview, an API-backed instruction assistant with explicit operation status, and a lower timeline with caption anchors and transcript controls. The interface uses the system font stack and inline SVG accents; it adds no font, icon, or UI framework dependency. The timeline strip can be clicked to seek through the current edited sequence.
+
 ## Run the editor on your computer
 
 Requirements: Python 3.10+, FFmpeg and FFprobe on `PATH`, and (for caption burn-in) a readable font file. No Python packages are needed.
